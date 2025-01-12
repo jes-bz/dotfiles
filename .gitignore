@@ -1,3 +1,6 @@
 Ryujinx/
 
 .DS_Store
+
+zsh/.zsh_history
+zsh/.zsh_sessions
