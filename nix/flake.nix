@@ -21,6 +21,9 @@
           pkgs.arc-browser
           pkgs.atuin
           pkgs.btop
+          pkgs.discord
+          pkgs.transmission_4
+          pkgs.raycast
           pkgs.tmux
           pkgs.tree
         ];
@@ -31,11 +34,14 @@
           "mas"
         ];
         casks = [
+          "ghostty"
+          "spotify"
           "the-unarchiver"
           "vlc"
         ];
         masApps = {
           "NordVPN" = 905953485;
+          "Macrofactor" = 1553503471;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -46,8 +52,8 @@
         dock.autohide = true;
         dock.persistent-apps = [
           "${pkgs.arc-browser}/Applications/Arc.app"
-          "/Applications/Arc.app"
           "/System/Applications/Messages.app"
+          "/Applications/Ghostty.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
