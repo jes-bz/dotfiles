@@ -19,6 +19,7 @@
       environment.systemPackages =
         [ 
           pkgs.arc-browser
+          pkgs.atuin
           pkgs.btop
           pkgs.tmux
           pkgs.tree
