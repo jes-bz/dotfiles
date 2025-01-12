@@ -17,7 +17,9 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.btop
+        [ 
+          pkgs.arc-browser
+          pkgs.btop
           pkgs.tmux
           pkgs.tree
         ];
@@ -35,6 +37,21 @@
           "NordVPN" = 905953485;
         };
         onActivation.cleanup = "zap";
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
+      };
+
+      system.defaults = {
+        dock.autohide = true;
+        dock.persistent-apps = [
+          "${pkgs.arc-browser}/Applications/Arc.app"
+          "/Applications/Arc.app"
+          "/System/Applications/Messages.app"
+        ];
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.KeyRepeat = 2;
       };
 
       # Necessary for using flakes on this system.
