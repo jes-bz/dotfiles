@@ -26,6 +26,7 @@
           pkgs.raycast
           pkgs.tmux
           pkgs.tree
+          pkgs.vscode
         ];
 
       homebrew = {
@@ -35,6 +36,9 @@
         ];
         casks = [
           "ghostty"
+          "logi-options+"
+          "logitune"
+          "nvidia-geforce-now"
           "spotify"
           "the-unarchiver"
           "vlc"
