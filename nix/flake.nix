@@ -26,6 +26,7 @@
           pkgs.raycast
           pkgs.tmux
           pkgs.tree
+          pkgs.uv
           pkgs.vscode
         ];
 
