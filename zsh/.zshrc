@@ -10,6 +10,7 @@ export ZSH=/Users/jesse/.config/zsh/.oh-my-zsh
 export TERM=xterm-256color
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_CONFIG_FILE="~/.config/zsh/.p10k.zsh"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs anaconda)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -48,6 +49,27 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=$ZDOTDIR/.zsh_history
 
 alias fixpr='git reset --soft HEAD~1 && git add . && git commit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"'
+alias nix-rebuild='darwin-rebuild switch  --flake ~/.config/nix'
+
+
+# eza aliases
+alias ls='eza --color=always --group-directories-first --icons'
+alias ll='eza -la --icons --octal-permissions --group-directories-first'
+alias l='eza -bGF --header --git --color=always --group-directories-first --icons'
+alias llm='eza -lbGd --header --git --sort=modified --color=always --group-directories-first --icons' 
+alias la='eza --long --all --group --group-directories-first'
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --color=always --group-directories-first --icons'
+
+alias lS='eza -1 --color=always --group-directories-first --icons'
+alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
+alias l.="eza -a | grep -E '^\.'"
+
+# bat aliases
+alias cat="bat --paging=never --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+
+# ripgrep aliases
+alias grep="rg -uuu"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -63,8 +85,8 @@ alias fixpr='git reset --soft HEAD~1 && git add . && git commit -m"$(git log --f
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 . "$HOME/.local/bin/env"
 eval "$(atuin init zsh)"
