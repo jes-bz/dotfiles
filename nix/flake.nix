@@ -20,10 +20,14 @@
         [ 
           pkgs.arc-browser
           pkgs.atuin
+          pkgs.bat
           pkgs.btop
           pkgs.discord
+          pkgs.eza
+          pkgs.micro
           pkgs.transmission_4
           pkgs.raycast
+          pkgs.ripgrep
           pkgs.tmux
           pkgs.tree
           pkgs.uv
