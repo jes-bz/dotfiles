@@ -32,6 +32,7 @@
           pkgs.tree
           pkgs.uv
           pkgs.vscode
+          pkgs.yazi
         ];
 
       homebrew = {
@@ -56,6 +57,10 @@
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
       };
+
+      fonts.packages = [
+        pkgs.nerd-fonts.hack
+      ];
 
       system.defaults = {
         dock.autohide = true;

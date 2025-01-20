@@ -81,8 +81,6 @@ alias grep="rg -uuu"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
-# . /Users/jesse/miniconda3/etc/profile.d/conda.sh  # commented out by conda initialize
-
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
