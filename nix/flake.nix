@@ -24,9 +24,9 @@
           pkgs.btop
           pkgs.discord
           pkgs.eza
+          pkgs.ffmpeg
           pkgs.micro
-          pkgs.transmission_4
-          pkgs.raycast
+          pkgs.obsidian
           pkgs.ripgrep
           pkgs.tmux
           pkgs.tree
@@ -45,9 +45,13 @@
           "logi-options+"
           "logitune"
           "nvidia-geforce-now"
+          "orion"
+          "raycast"
           "spotify"
           "the-unarchiver"
+          "transmission"
           "vlc"
+          "zen-browser"
         ];
         masApps = {
           "NordVPN" = 905953485;
@@ -68,6 +72,7 @@
           "${pkgs.arc-browser}/Applications/Arc.app"
           "/System/Applications/Messages.app"
           "/Applications/Ghostty.app"
+          "/Applications/Zen Browser.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
