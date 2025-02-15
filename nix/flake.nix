@@ -51,7 +51,6 @@
           "the-unarchiver"
           "transmission"
           "vlc"
-          "zen-browser"
         ];
         masApps = {
           "NordVPN" = 905953485;
@@ -72,7 +71,6 @@
           "${pkgs.arc-browser}/Applications/Arc.app"
           "/System/Applications/Messages.app"
           "/Applications/Ghostty.app"
-          "/Applications/Zen Browser.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
