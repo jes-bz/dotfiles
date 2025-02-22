@@ -88,3 +88,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 . "$HOME/.local/bin/env"
 eval "$(atuin init zsh)"
+
+# VS Code shell integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
