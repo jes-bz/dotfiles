@@ -28,11 +28,11 @@
           pkgs.micro
           pkgs.obsidian
           pkgs.ripgrep
+          pkgs.superfile
           pkgs.tmux
           pkgs.tree
           pkgs.uv
           pkgs.vscode
-          pkgs.yazi
         ];
 
       homebrew = {
