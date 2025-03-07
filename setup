@@ -1,0 +1,3 @@
+sh <(curl -L https://nixos.org/nix/install)
+nix-shell -p git --run 'git clone https://github.com/jessebrizzi/dotfiles.git ~/.config'
+nix run nix-darwin  --extra-experimental-features 'nix-command flakes' -- switch--flake ~/.config/nix
