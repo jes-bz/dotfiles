@@ -49,7 +49,7 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=$ZDOTDIR/.zsh_history
 
 alias fixpr='git reset --soft HEAD~1 && git add . && git commit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"'
-alias nix-rebuild='darwin-rebuild switch  --flake ~/.config/nix'
+alias nix-rebuild='nix flake update --flake ~/.config/nix && darwin-rebuild switch  --flake ~/.config/nix'
 
 
 # eza aliases

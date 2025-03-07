@@ -45,7 +45,6 @@
           "logi-options+"
           "logitune"
           "nvidia-geforce-now"
-          "orion"
           "raycast"
           "spotify"
           "the-unarchiver"
@@ -55,6 +54,8 @@
         masApps = {
           "NordVPN" = 905953485;
           "Macrofactor" = 1553503471;
+          "eufy" = 1424956516;
+          "Windows App" = 1295203466;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
