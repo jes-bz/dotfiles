@@ -89,7 +89,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
 eval "$(atuin init zsh)"
 
 # VS Code shell integration
