@@ -47,6 +47,7 @@
           "nvidia-geforce-now"
           "raycast"
           "spotify"
+          "topnotch"
           "the-unarchiver"
           "transmission"
           "vlc"
@@ -98,8 +99,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Jesses-Air
-    darwinConfigurations."Jesses-Air" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#Jesses-MaxBook-Air
+    darwinConfigurations."Jesses-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ 
         configuration
         nix-homebrew.darwinModules.nix-homebrew
