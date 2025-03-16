@@ -44,7 +44,6 @@
           "ghostty"
           "logi-options+"
           "logitune"
-          "nvidia-geforce-now"
           "raycast"
           "spotify"
           "topnotch"
