@@ -49,7 +49,7 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=$ZDOTDIR/.zsh_history
 
 alias fixpr='git reset --soft HEAD~1 && git add . && git commit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"'
-alias nix-rebuild='nix flake update --flake ~/.config/nix && darwin-rebuild switch  --flake ~/.config/nix'
+alias nix-rebuild='nix flake update --flake ~/.config/nix && sudo darwin-rebuild switch  --flake ~/.config/nix'
 
 
 # eza aliases
@@ -84,7 +84,7 @@ alias spf="superfile"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH="/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

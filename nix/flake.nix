@@ -18,7 +18,6 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ 
-          pkgs.arc-browser
           pkgs.atuin
           pkgs.bat
           pkgs.btop
@@ -29,6 +28,7 @@
           pkgs.obsidian
           pkgs.ripgrep
           pkgs.superfile
+          pkgs.spotify
           pkgs.tmux
           pkgs.tree
           pkgs.uv
@@ -41,11 +41,13 @@
           "mas"
         ];
         casks = [
+          "arc"
+          "batfi"
           "ghostty"
           "logi-options+"
           "logitune"
+          "orion"
           "raycast"
-          "spotify"
           "topnotch"
           "the-unarchiver"
           "transmission"
@@ -69,7 +71,7 @@
       system.defaults = {
         dock.autohide = true;
         dock.persistent-apps = [
-          "${pkgs.arc-browser}/Applications/Arc.app"
+          "/Applications/Arc.app"
           "/System/Applications/Messages.app"
           "/Applications/Ghostty.app"
         ];
@@ -91,6 +93,8 @@
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
       system.stateVersion = 5;
+
+      system.primaryUser = "jesse";
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
