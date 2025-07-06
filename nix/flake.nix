@@ -43,7 +43,6 @@
         casks = [
           "arc"
           "batfi"
-          "ghostty"
           "logi-options+"
           "logitune"
           "orion"
@@ -70,11 +69,7 @@
 
       system.defaults = {
         dock.autohide = true;
-        dock.persistent-apps = [
-          "/Applications/Arc.app"
-          "/System/Applications/Messages.app"
-          "/Applications/Ghostty.app"
-        ];
+        dock.persistent-apps = [];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
