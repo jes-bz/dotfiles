@@ -43,14 +43,13 @@
         casks = [
           "arc"
           "batfi"
+          "iina"
           "logi-options+"
           "logitune"
-          "orion"
           "raycast"
           "topnotch"
           "the-unarchiver"
           "transmission"
-          "vlc"
         ];
         masApps = {
           "NordVPN" = 905953485;

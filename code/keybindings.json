@@ -1,95 +1,109 @@
-// Place your key bindings in this file to override the defaults
+// Universal Keybindings for macOS, Windows, and Linux
+//
+// How it works:
+// - 'cmd' is automatically translated to 'Cmd' on macOS and 'Ctrl' on Windows/Linux.
+// - 'ctrl' always means the literal 'Control' key on all platforms.
+//
+// By using 'cmd' for all primary shortcuts, this file works on all systems.
 [
     //--------------------------------------------------------------------
     // General Workbench & Navigation
     //--------------------------------------------------------------------
     {
-        "key": "cmd+escape",
+        "key": "cmd+\\", // Mac: Cmd+\, Win: Ctrl+\
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "cmd+\\",
-        "command": "-workbench.action.toggleSidebarVisibility"
+        "key": "cmd+\\", // Ensures this works even when terminal is focused
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "terminalFocus"
     },
     {
-        "key": "cmd+[",
+        "key": "cmd+[", // Mac: Cmd+[, Win: Ctrl+[
         "command": "workbench.action.navigateBack",
         "when": "canNavigateBack"
     },
     {
-        "key": "ctrl+-",
+        "key": "ctrl+-", // Unbinds the default on both platforms
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
     },
     {
-        "key": "cmd+]",
+        "key": "cmd+]", // Mac: Cmd+], Win: Ctrl+]
         "command": "workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
     {
-        "key": "ctrl+shift+-",
+        "key": "ctrl+shift+-", // Unbinds the default on both platforms
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
     //--------------------------------------------------------------------
-    // Sidebar View Focus (Cmd+Shift+Letter)
+    // Sidebar View Focus (Universal: Cmd+Shift+Letter)
     //--------------------------------------------------------------------
     {
-        "key": "cmd+shift+e",
+        "key": "cmd+shift+e", // Mac: Cmd+Shift+E, Win: Ctrl+Shift+E
         "command": "workbench.view.explorer"
     },
     {
         "key": "ctrl+shift+e",
-        "command": "-workbench.view.explorer"
+        "command": "-workbench.view.explorer" // Unbinds literal Ctrl on Mac
     },
     {
-        "key": "cmd+shift+f",
+        "key": "cmd+shift+f", // Mac: Cmd+Shift+F, Win: Ctrl+Shift+F
         "command": "workbench.view.search"
     },
     {
         "key": "ctrl+shift+f",
-        "command": "-workbench.view.search"
+        "command": "-workbench.view.search" // Unbinds literal Ctrl on Mac
     },
     {
-        "key": "cmd+shift+g",
+        "key": "cmd+shift+g", // Mac: Cmd+Shift+G, Win: Ctrl+Shift+G
         "command": "workbench.view.scm"
     },
     {
         "key": "ctrl+shift+g",
-        "command": "-workbench.view.scm"
+        "command": "-workbench.view.scm" // Unbinds literal Ctrl on Mac
     },
     {
-        "key": "cmd+shift+d",
+        "key": "cmd+shift+d", // Mac: Cmd+Shift+D, Win: Ctrl+Shift+D
         "command": "workbench.view.debug"
     },
     {
         "key": "ctrl+shift+d",
-        "command": "-workbench.view.debug"
+        "command": "-workbench.view.debug" // Unbinds literal Ctrl on Mac
     },
     {
-        "key": "cmd+shift+x",
+        "key": "cmd+shift+x", // Mac: Cmd+Shift+X, Win: Ctrl+Shift+X
         "command": "workbench.view.extensions"
     },
     {
         "key": "ctrl+shift+x",
-        "command": "-workbench.view.extensions"
+        "command": "-workbench.view.extensions" // Unbinds literal Ctrl on Mac
+    },
+    //--------------------------------------------------------------------
+    // Custom Extension Bindings
+    //--------------------------------------------------------------------
+    {
+        "key": "shift+cmd+c",
+        "command": "kilo-code.focusChatInput"
     },
     {
-        "key": "shift+cmd+a",
+        "key": "shift+cmd+a", // Freeing up this chord from kilo-code
         "command": "-kilo-code.focusChatInput",
         "when": "true"
     },
     {
-        "key": "shift+cmd+c",
+        "key": "shift+cmd+c", // Freeing up this chord from the native terminal
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
     //--------------------------------------------------------------------
     // Editor Management
-    // NOTE: Editor focus uses the VS Code defaults (e.g., Cmd+1, Cmd+2).
+    // NOTE: Editor focus (Cmd+1, etc.) uses the default universal mapping.
     //--------------------------------------------------------------------
     {
-        "key": "shift+cmd+l",
+        "key": "shift+cmd+l", // Mac: Shift+Cmd+L, Win: Shift+Ctrl+L
         "command": "editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorTextFocus"
     },
@@ -102,7 +116,7 @@
     // Terminal
     //--------------------------------------------------------------------
     {
-        "key": "cmd+t",
+        "key": "cmd+t", // Mac: Cmd+T, Win: Ctrl+T
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
@@ -111,26 +125,24 @@
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "shift+cmd+t",
+        "key": "shift+cmd+t", // Mac: Shift+Cmd+T, Win: Shift+Ctrl+T
         "command": "workbench.action.toggleMaximizedPanel"
     },
-    // --- Smart Cmd+C: Copies when text is selected, sends interrupt (Ctrl+C) otherwise ---
     {
-        "key": "cmd+c",
+        "key": "cmd+c", // Mac: Cmd+C, Win: Ctrl+C
         "command": "workbench.action.terminal.copySelection",
         "when": "terminalFocus && terminalTextSelected"
     },
     {
-        "key": "cmd+c",
+        "key": "cmd+c", // Mac: Cmd+C, Win: Ctrl+C
         "command": "workbench.action.terminal.sendSequence",
         "args": {
             "text": "\u0003"
-        }, // This is the Ctrl+C character
+        }, // Ctrl+C interrupt
         "when": "terminalFocus && !terminalTextSelected"
     },
-    // --- Custom Chord for Terminal Actions (shift+cmd+a) ---
     {
-        "key": "shift+cmd+a c",
+        "key": "shift+cmd+a c", // Mac: Shift+Cmd+A C, Win: Shift+Ctrl+A C
         "command": "workbench.action.terminal.new"
     },
     {
@@ -197,18 +209,12 @@
         "command": "-workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
-    // --- TMUX-like Prefix ---
     {
-        "key": "cmd+a",
+        "key": "cmd+a", // Mac: Cmd+A, Win: Ctrl+A (for tmux prefix)
         "command": "workbench.action.terminal.sendSequence",
         "args": {
             "text": "\u0001"
-        }, // This is the Ctrl+A character (tmux prefix)
+        }, // Ctrl+A character
         "when": "terminalFocus"
-    },
-    {
-        "key": "shift+cmd+c",
-        "command": "kilo-code.focusChatInput",
-        "when": "true"
     }
 ]
