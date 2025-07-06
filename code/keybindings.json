@@ -1,0 +1,214 @@
+// Place your key bindings in this file to override the defaults
+[
+    //--------------------------------------------------------------------
+    // General Workbench & Navigation
+    //--------------------------------------------------------------------
+    {
+        "key": "cmd+escape",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    //--------------------------------------------------------------------
+    // Sidebar View Focus (Cmd+Shift+Letter)
+    //--------------------------------------------------------------------
+    {
+        "key": "cmd+shift+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "cmd+shift+f",
+        "command": "workbench.view.search"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.view.search"
+    },
+    {
+        "key": "cmd+shift+g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "cmd+shift+d",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "cmd+shift+x",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+shift+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "-kilo-code.focusChatInput",
+        "when": "true"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    //--------------------------------------------------------------------
+    // Editor Management
+    // NOTE: Editor focus uses the VS Code defaults (e.g., Cmd+1, Cmd+2).
+    //--------------------------------------------------------------------
+    {
+        "key": "shift+cmd+l",
+        "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+    },
+    //--------------------------------------------------------------------
+    // Terminal
+    //--------------------------------------------------------------------
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    // --- Smart Cmd+C: Copies when text is selected, sends interrupt (Ctrl+C) otherwise ---
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalTextSelected"
+    },
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0003"
+        }, // This is the Ctrl+C character
+        "when": "terminalFocus && !terminalTextSelected"
+    },
+    // --- Custom Chord for Terminal Actions (shift+cmd+a) ---
+    {
+        "key": "shift+cmd+a c",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "shift+cmd+a k",
+        "command": "workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus"
+    },
+    {
+        "key": "shift+cmd+a \\",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+a n",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+a p",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+a shift+n",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+a shift+p",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    // --- TMUX-like Prefix ---
+    {
+        "key": "cmd+a",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0001"
+        }, // This is the Ctrl+A character (tmux prefix)
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "kilo-code.focusChatInput",
+        "when": "true"
+    }
+]
