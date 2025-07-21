@@ -44,6 +44,7 @@
           "arc"
           "batfi"
           "iina"
+          "karabiner-elements"
           "logi-options+"
           "logitune"
           "raycast"
