@@ -5,3 +5,14 @@ Ryujinx/
 zsh/.zsh_history
 zsh/.zsh_sessions
 zsh/.zcompdump*
+
+# General
+configstore/
+*.zwc
+uv/uv-receipt.json
+
+# Karabiner
+karabiner/automatic_backups/
+
+# Zsh
+zsh/.oh-my-zsh/cache/
