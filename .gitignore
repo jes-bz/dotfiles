@@ -16,3 +16,4 @@ uv/uv-receipt.json
 karabiner/automatic_backups/
 
 nix/flake.lock
+.kilocode/mcp.json
