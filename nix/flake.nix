@@ -27,7 +27,6 @@
           pkgs.micro
           pkgs.obsidian
           pkgs.ripgrep
-          pkgs.superfile
           pkgs.spotify
           pkgs.tmux
           pkgs.tree
@@ -39,23 +38,25 @@
         enable = true;
         brews = [
           "mas"
+          "gemini-cli"
         ];
         casks = [
           "arc"
           "batfi"
+          "ghostty"
           "iina"
           "karabiner-elements"
+          "last-window-quits"
           "logi-options+"
           "logitune"
           "raycast"
           "topnotch"
           "the-unarchiver"
           "transmission"
+          "vivaldi"
         ];
         masApps = {
           "NordVPN" = 905953485;
-          "Macrofactor" = 1553503471;
-          "eufy" = 1424956516;
           "Windows App" = 1295203466;
         };
         onActivation.cleanup = "zap";
