@@ -5,6 +5,7 @@ Ryujinx/
 zsh/.zsh_history
 zsh/.zsh_sessions
 zsh/.zcompdump*
+zsh/.oh-my-zsh/cache/nix/flake.lock
 
 # General
 configstore/
@@ -14,5 +15,4 @@ uv/uv-receipt.json
 # Karabiner
 karabiner/automatic_backups/
 
-# Zsh
-zsh/.oh-my-zsh/cache/
+nix/flake.lock
