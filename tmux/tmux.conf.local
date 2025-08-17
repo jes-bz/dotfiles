@@ -408,10 +408,10 @@ bind -r o select-pane -U  # move up
 bind -r \; select-pane -R  # move right
 
 # pane resizing
-bind -r K resize-pane -L 2
-bind -r L resize-pane -D 2
-bind -r O resize-pane -U 2
-bind -r \: resize-pane -R 2
+bind -r Left  resize-pane -L 2
+bind -r Down  resize-pane -D 2
+bind -r Up    resize-pane -U 2
+bind -r Right resize-pane -R 2
 
 # increase history size
 #set -g history-limit 10000
