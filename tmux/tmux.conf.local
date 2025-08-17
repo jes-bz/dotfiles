@@ -383,6 +383,9 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # this is the place to override or undo settings
 
+bind-key p previous-window
+bind-key n next-window
+
 # increase history size
 #set -g history-limit 10000
 
