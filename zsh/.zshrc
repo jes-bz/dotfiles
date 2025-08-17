@@ -95,3 +95,13 @@ eval "$(atuin init zsh)"
 # VS Code shell integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
+
+# Custom git command
+unalias g &>/dev/null
+g() {
+  if [ $# -eq 0 ]; then
+    command git status
+  else
+    command git "$@"
+  fi
+}
