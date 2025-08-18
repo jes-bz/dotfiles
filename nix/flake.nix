@@ -26,6 +26,7 @@
           pkgs.ffmpeg
           pkgs.micro
           pkgs.obsidian
+          pkgs.qwen-code
           pkgs.ripgrep
           pkgs.spotify
           pkgs.tmux
