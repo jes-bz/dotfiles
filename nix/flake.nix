@@ -21,29 +21,29 @@
           pkgs.atuin
           pkgs.bat
           pkgs.btop
-          pkgs.discord
           pkgs.eza
           pkgs.ffmpeg
+          pkgs.gemini-cli
+          pkgs.gh
+          pkgs.imagemagick
           pkgs.micro
           pkgs.obsidian
           pkgs.qwen-code
           pkgs.ripgrep
-          pkgs.spotify
           pkgs.tmux
           pkgs.tree
           pkgs.uv
-          pkgs.vscode
         ];
 
       homebrew = {
         enable = true;
         brews = [
           "mas"
-          "gemini-cli"
         ];
         casks = [
           "arc"
           "batfi"
+          "discord"
           "ghostty"
           "iina"
           "karabiner-elements"
@@ -51,10 +51,12 @@
           "logi-options+"
           "logitune"
           "raycast"
+          "spotify"
           "topnotch"
           "the-unarchiver"
           "transmission"
           "vivaldi"
+          "visual-studio-code"
         ];
         masApps = {
           "NordVPN" = 905953485;

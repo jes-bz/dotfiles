@@ -71,8 +71,7 @@ alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /de
 # ripgrep aliases
 alias grep="rg -uuu"
 
-# superfile
-alias spf="superfile"
+alias ghcs="gh copilot suggest"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
