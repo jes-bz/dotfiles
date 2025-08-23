@@ -1,3 +1,36 @@
+#!/bin/sh
+
 sh <(curl -L https://nixos.org/nix/install)
 nix-shell -p git --run 'git clone https://github.com/jessebrizzi/dotfiles.git ~/.config'
 nix run nix-darwin  --extra-experimental-features 'nix-command flakes' -- switch--flake ~/.config/nix
+
+# Initialize git submodules
+echo "Initializing git submodules..."
+git submodule update --init --recursive
+echo "Git submodules initialized successfully."
+
+# Install Oh My Zsh plugins and theme
+echo "Installing Oh My Zsh plugins and theme..."
+mkdir -p zsh/.oh-my-zsh/custom/plugins
+mkdir -p zsh/.oh-my-zsh/custom/themes
+
+# Clone Oh My Zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git zsh/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/Aloxaf/fzf-tab zsh/.oh-my-zsh/custom/plugins/fzf-tab
+
+# Clone Oh My Zsh theme
+git clone https://github.com/romkatv/powerlevel10k.git zsh/.oh-my-zsh/custom/themes/powerlevel10k
+echo "Oh My Zsh plugins and theme installed successfully."
+
+# Create symbolic link for .zshenv file to home directory
+echo "Creating symbolic link for .zshenv file to home directory..."
+ln -sf ~/.config/zsh/.zshenv ~/.zshenv
+echo ".zshenv symbolic link created successfully."
+
+# Create symbolic link for pre-commit hook
+echo "Creating symbolic link for pre-commit hook..."
+mkdir -p .git/hooks
+ln -sf ~/.config/git-hooks/pre-commit .git/hooks/pre-commit
+echo "Pre-commit hook symbolic link created successfully."
