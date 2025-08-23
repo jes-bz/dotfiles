@@ -62,7 +62,7 @@ alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --color=al
 
 alias lS='eza -1 --color=always --group-directories-first --icons'
 alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
-alias l.="eza -a | grep -E '^\.'"
+alias l.="eza -a | grep -E '^.'"
 
 # bat aliases
 alias cat="bat --paging=never --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
@@ -94,6 +94,64 @@ eval "$(atuin init zsh)"
 # VS Code shell integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
+#
+# Gemini CLI tool to generate and execute commands
+#
+uhh() {
+  # Get the user's request from the command-line arguments
+  local user_request="$*"
+
+  # Prepare the prompt for Gemini
+  local prompt="You are a helpful assistant that translates natural language descriptions into shell commands.
+  You will be given a description of a task and you need to provide a shell command to achieve that task.
+  
+  You must return the response in this exact format:
+  Command: [the shell command here]
+  Description: [a brief description of what the command does]
+  
+  Example response:
+  Command: ls -la
+  Description: List all files in the current directory with detailed information.
+  
+  The command should be a one-liner with no line breaks.
+  Only return the Command and Description lines, nothing else.
+  
+  Here is some information about the user's environment:
+  - Shell: $SHELL
+  - Operating System: $(uname)
+  
+  Here is the user's request: '$user_request'"
+
+  # Call the Gemini CLI
+  local gemini_response=$(gemini -p "$prompt" | tail -n +2)
+
+  # Extract the command and description from the response
+  local command=$(echo "$gemini_response" | grep "^Command:" | sed "s/^Command: //")
+  local description=$(echo "$gemini_response" | grep "^Description:" | sed "s/^Description: //")
+
+  # Check if we got valid output
+  if [[ -z "$command" || -z "$description" ]]; then
+    echo "Error: Could not parse Gemini response:"
+    echo "$gemini_response"
+    return 1
+  fi
+
+  # Display the command and description to the user
+  echo "Suggested command:"
+  echo "  $command"
+  echo "\nDescription:"
+  echo "  $description"
+
+  # Ask the user for confirmation
+  read -q "?Execute this command? (y/n) "
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    # Execute the command
+    eval "$command"
+  else
+    echo "Command not executed."
+  fi
+}
 
 # Custom git command
 unalias g &>/dev/null
