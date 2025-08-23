@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Pre-commit hook to check for API_KEY strings in files being committed
+
+# Get the list of files being committed
+FILES=$(git diff --cached --name-only --diff-filter=ACMR)
+
+# If no files are being committed, exit successfully
+if [ -z "$FILES" ]; then
+    exit 0
+fi
+
+echo "Checking for API_KEY strings in committed files..."
+
+# Check each file for API_KEY strings
+for FILE in $FILES; do
+    # Skip if file doesn't exist (e.g., deleted files)
+    if [ ! -f "$FILE" ]; then
+        continue
+    fi
+    
+    # Skip the pre-commit hook itself
+    if [ "$FILE" = ".git/hooks/pre-commit" ] || [ "$FILE" = "git-hooks/pre-commit" ]; then
+        continue
+    fi
+    
+    # Check for API_KEY strings (case sensitive)
+    if grep -n "API_KEY" "$FILE"; then
+        echo "ERROR: Found API_KEY string in $FILE"
+        echo "Commit aborted to prevent accidental API key exposure."
+        exit 1
+    fi
+done
+
+echo "No API_KEY strings found. Commit allowed."
+exit 0
