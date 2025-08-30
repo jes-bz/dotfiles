@@ -1,0 +1,5 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nunmapAll\nmap <m-up> scrollUp\nmap <m-down> scrollDown\nmap <m-left> scrollLeft\nmap <m-right> scrollRight\n\nmap <s-m-up> scrollPageUp\nmap <s-m-down> scrollPageDown\n\nmap <m-;> LinkHints.activateMode\n\nmap <m-f> enterFindMode\nmap ] performFind\nmap [ performBackwardsFind",
+  "settingsVersion": "2.3",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8f8f8f),\n  color-stop(100%,#8f8f8f));\nborder: 1px solid #3b3b3b;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
