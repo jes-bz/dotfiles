@@ -23,7 +23,6 @@
           pkgs.btop
           pkgs.eza
           pkgs.ffmpeg
-          pkgs.gemini-cli
           pkgs.gh
           pkgs.imagemagick
           pkgs.micro
@@ -39,12 +38,13 @@
         enable = true;
         brews = [
           "mas"
+          "gemini-cli"
         ];
         casks = [
+          "alt-tab"
           "arc"
           "batfi"
           "discord"
-          "ghostty"
           "iina"
           "karabiner-elements"
           "last-window-quits"
