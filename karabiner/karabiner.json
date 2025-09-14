@@ -6,14 +6,14 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change right_option to command+control+option.",
+                                "description": "Change right_option to meh:shift+control+option.",
                                 "from": {
                                     "key_code": "right_option",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command",
+                                        "key_code": "left_shift",
                                         "modifiers": ["left_control", "left_option"]
                                     }
                                 ],
@@ -24,7 +24,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change right_command to command+control+option+shift.",
+                                "description": "Change right_command to hyper:command+control+option+shift.",
                                 "from": {
                                     "key_code": "right_command",
                                     "modifiers": { "optional": ["any"] }
