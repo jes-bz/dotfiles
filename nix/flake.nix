@@ -39,6 +39,7 @@
         brews = [
           "mas"
           "gemini-cli"
+          "codex"
         ];
         casks = [
           "alt-tab"
