@@ -47,6 +47,7 @@
           "arc"
           "batfi"
           "discord"
+          "google-drive"
           "iina"
           "karabiner-elements"
           "last-window-quits"
@@ -75,12 +76,54 @@
       ];
 
       system.defaults = {
-        dock.autohide = true;
-        dock.persistent-apps = [];
-        finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
-        NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.KeyRepeat = 2;
+      };
+
+      system.defaults.NSGlobalDomain = {
+        AppleInterfaceStyle = "Dark";
+        AppleShowAllExtensions = true;
+        KeyRepeat = 2;
+        NSAutomaticCapitalizationEnabled = true;
+        NSAutomaticPeriodSubstitutionEnabled = true;
+        NSTableViewDefaultSizeMode = 1;
+        "com.apple.springing.delay" = 0.5;
+        "com.apple.springing.enabled" = true;
+        "com.apple.trackpad.forceClick" = true;
+        "com.apple.trackpad.scaling" = 1.0;
+      };
+
+      system.defaults.CustomUserPreferences = {
+        "com.apple.systempreferences" = {
+          allowCloudDesktopAndDocuments = false;
+        };
+      };
+
+      system.defaults.finder = {
+        FXPreferredViewStyle = "clmv";
+        ShowPathbar = true;
+        ShowStatusBar = true;
+        ShowExternalHardDrivesOnDesktop = true;
+        ShowHardDrivesOnDesktop = true;
+        ShowRemovableMediaOnDesktop = true;
+        FXRemoveOldTrashItems = true;
+        _FXSortFoldersFirst = true;
+      };
+
+      system.defaults.dock = {
+        autohide = true;
+        persistent-apps = [];
+        mineffect = "scale";
+        tilesize = 25;
+        show-recents = false;
+        showAppExposeGestureEnabled = false;
+        showMissionControlGestureEnabled = true;
+        wvous-br-corner = 1;  # hot corner - 1 = disabled
+      };
+
+      system.defaults.menuExtraClock = {
+        ShowAMPM = true;
+        ShowDate = 0;
+        ShowDayOfWeek = true;
       };
 
       # Necessary for using flakes on this system.
