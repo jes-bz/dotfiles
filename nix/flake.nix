@@ -22,12 +22,13 @@
           pkgs.bat
           pkgs.btop
           pkgs.eza
+          pkgs.fd
           pkgs.ffmpeg
+          pkgs.fzf
           pkgs.gh
           pkgs.imagemagick
           pkgs.micro
           pkgs.obsidian
-          pkgs.qwen-code
           pkgs.ripgrep
           pkgs.tmux
           pkgs.tree
@@ -39,7 +40,7 @@
         brews = [
           "mas"
           "gemini-cli"
-          "codex"
+          "qwen-code"
         ];
         casks = [
           "alt-tab"
@@ -56,6 +57,7 @@
           "topnotch"
           "the-unarchiver"
           "transmission"
+          "utm"
           "vivaldi"
           "visual-studio-code"
         ];

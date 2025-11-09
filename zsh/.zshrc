@@ -89,7 +89,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH"
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # . "$HOME/.local/bin/env"
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
+source <(fzf --zsh)
+bindkey "^[OA" fzf-history-widget 
 
 # VS Code shell integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
