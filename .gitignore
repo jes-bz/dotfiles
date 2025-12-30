@@ -17,3 +17,6 @@ karabiner/automatic_backups/
 
 nix/flake.lock
 .kilocode/mcp.json
+
+micro/buffers/history
+tmux/plugins/tpm_log.txt
