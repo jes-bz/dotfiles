@@ -17,8 +17,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ 
-          pkgs.atuin
+        [
           pkgs.bat
           pkgs.btop
           pkgs.eza
@@ -40,11 +39,13 @@
         brews = [
           "mas"
           "gemini-cli"
+          "mactop"
           "qwen-code"
+          "superfile"
         ];
         casks = [
+          "adguard"
           "alt-tab"
-          "arc"
           "batfi"
           "discord"
           "google-drive"
