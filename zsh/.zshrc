@@ -72,6 +72,7 @@ alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /de
 alias grep="rg -uuu"
 
 alias ghcs="gh copilot suggest"
+alias gc="gemini --model gemini-3-pro-preview"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
