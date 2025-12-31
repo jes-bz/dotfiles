@@ -66,7 +66,6 @@ alias l.="eza -a | grep -E '^.'"
 
 # bat aliases
 alias cat="bat --paging=never --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
-alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 
 # ripgrep aliases
 alias grep="rg -uuu"
@@ -93,6 +92,56 @@ export PATH="/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH"
 # eval "$(atuin init zsh)"
 source <(fzf --zsh)
 bindkey "^[OA" fzf-history-widget 
+
+# -- Use fd instead of fzf --
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+source /Users/jesse/.config/zsh/fzf-git/fzf-git.sh
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#e8e8e8,fg+:#ffffff,bg:#000000,bg+:#2d2d2d
+  --color=hl:#d9b98c,hl+:#ff9e3b,info:#b9d665,marker:#f08d49
+  --color=prompt:#ff6b6b,spinner:#ffb86c,pointer:#ff9e3b,header:#d9b98c
+  --color=gutter:000000,border:#636363,label:#aeaeae,query:#ffffff
+  --border="bold" --border-label="" --preview-window="border-bold" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+
+export BAT_THEME="catthode"
 
 # VS Code shell integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
