@@ -11,3 +11,6 @@
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 	ignore = dirty
+[submodule "zsh/fzf-git"]
+	path = zsh/fzf-git
+	url = https://github.com/junegunn/fzf-git.sh.git
