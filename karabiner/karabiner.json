@@ -4,13 +4,54 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Swap Command and Control in Alacritty",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.alacritty$",
+                                            "^io\\.alacritty$",
+                                            "^com\\.jwilm\\.Alacritty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.alacritty$",
+                                            "^io\\.alacritty$",
+                                            "^com\\.jwilm\\.Alacritty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "conditions": [
                             {
                                 "identifiers": [{ "is_built_in_keyboard": true }],
                                 "type": "device_if"
                             }
                         ],
-                        "description": "Right ⌘ as layer",
+                        "description": "Right right_command as layer",
                         "manipulators": [
                             {
                                 "from": {
@@ -341,7 +382,7 @@
                         ],
                         "manipulators": [
                             {
-                                "description": "Change right_command to hyper:command+control+option+shift.",
+                                "description": "Change right_option to hyper:command+control+option+shift.",
                                 "from": {
                                     "key_code": "right_option",
                                     "modifiers": { "optional": ["any"] }

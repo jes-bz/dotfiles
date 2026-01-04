@@ -2,6 +2,8 @@ Ryujinx/
 
 .DS_Store
 
+gh/hosts.yml
+
 zsh/.zsh_history
 zsh/.zsh_sessions
 zsh/.zcompdump*

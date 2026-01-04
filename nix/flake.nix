@@ -39,12 +39,14 @@
         brews = [
           "mas"
           "gemini-cli"
+          "git-delta"
           "mactop"
           "qwen-code"
           "superfile"
         ];
         casks = [
           "adguard"
+          "alacritty"
           "alt-tab"
           "batfi"
           "discord"
