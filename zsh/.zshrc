@@ -91,7 +91,17 @@ export PATH="/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH"
 # . "$HOME/.local/bin/env"
 # eval "$(atuin init zsh)"
 source <(fzf --zsh)
-bindkey "^[OA" fzf-history-widget 
+
+up-line-or-fzf-history() {
+  if [[ $LBUFFER == *$'\n'* ]]; then
+    zle up-line
+  else
+    zle fzf-history-widget
+  fi
+}
+
+zle -N up-line-or-fzf-history
+bindkey "^[OA" up-line-or-fzf-history
 
 # -- Use fd instead of fzf --
 
