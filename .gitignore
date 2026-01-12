@@ -22,3 +22,6 @@ nix/flake.lock
 
 micro/buffers/history
 tmux/plugins/tpm_log.txt
+
+# mole
+mole/*

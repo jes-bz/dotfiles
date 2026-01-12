@@ -41,6 +41,7 @@
           "gemini-cli"
           "git-delta"
           "mactop"
+          "mole"
           "qwen-code"
           "superfile"
         ];
