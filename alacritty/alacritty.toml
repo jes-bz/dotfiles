@@ -3,6 +3,10 @@ import = [
   "~/.config/alacritty/catthode.toml"
 ]
 
+[window]
+decorations = "none"
+opacity = 0.75
+
 [font]
 size = 13.0
 
