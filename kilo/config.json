@@ -1,0 +1,36 @@
+{
+  "$schema": "https://kilo.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "ls *": "allow",
+      "ls": "allow",
+      "cd *": "allow",
+      "cd": "allow",
+      "pwd": "allow",
+      "cat *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "find *": "allow",
+      "which *": "allow",
+      "file *": "allow",
+      "stat *": "allow",
+      "echo *": "allow",
+      "date": "allow",
+      "whoami": "allow",
+      "git status *": "allow",
+      "git status": "allow",
+      "git diff *": "allow",
+      "git log *": "allow"
+    },
+    "cmd": "ask",
+    "webfetch": "ask",
+    "edit": "ask",
+    "write": "ask",
+    "read": "allow",
+    "list": "allow",
+    "grep": "allow",
+    "glob": "allow",
+    "ls": "allow"
+  }
+}
