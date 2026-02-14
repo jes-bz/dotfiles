@@ -1,4 +1,4 @@
-{
+	{
   description = "jesseb nix-darwin system flake";
 
   inputs = {
@@ -33,17 +33,20 @@
           pkgs.tree
           pkgs.uv
         ];
-
       homebrew = {
         enable = true;
         brews = [
           "mas"
           "gemini-cli"
           "git-delta"
+          "kilo"
           "mactop"
           "mole"
           "qwen-code"
           "superfile"
+        ];
+        taps = [
+          "kilo-org/tap"
         ];
         casks = [
           "adguard"

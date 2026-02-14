@@ -1,0 +1,219 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "catthode_base": "#000000",
+    "catthode_selection": "#2d2d2d",
+    "catthode_border": "#636363",
+    "catthode_text": "#ffffff",
+    "catthode_variable": "#e8e8e8",
+    "catthode_label": "#aeaeae",
+    "catthode_tan": "#d9b98c",
+    "catthode_gold": "#ffb86c",
+    "catthode_amber": "#ff9e3b",
+    "catthode_clay": "#f08d49",
+    "catthode_red": "#ff6b6b",
+    "catthode_green": "#b9d665"
+  },
+  "theme": {
+    "primary": {
+      "dark": "catthode_gold",
+      "light": "catthode_amber"
+    },
+    "secondary": {
+      "dark": "catthode_tan",
+      "light": "catthode_gold"
+    },
+    "accent": {
+      "dark": "catthode_amber",
+      "light": "catthode_clay"
+    },
+    "error": {
+      "dark": "catthode_red",
+      "light": "catthode_red"
+    },
+    "warning": {
+      "dark": "catthode_gold",
+      "light": "catthode_clay"
+    },
+    "success": {
+      "dark": "catthode_green",
+      "light": "catthode_green"
+    },
+    "info": {
+      "dark": "catthode_tan",
+      "light": "catthode_gold"
+    },
+    "text": {
+      "dark": "catthode_variable",
+      "light": "catthode_base"
+    },
+    "textMuted": {
+      "dark": "catthode_label",
+      "light": "catthode_border"
+    },
+    "background": {
+      "dark": "catthode_base",
+      "light": "catthode_variable"
+    },
+    "backgroundPanel": {
+      "dark": "catthode_selection",
+      "light": "catthode_variable"
+    },
+    "backgroundElement": {
+      "dark": "catthode_selection",
+      "light": "catthode_text"
+    },
+    "border": {
+      "dark": "catthode_border",
+      "light": "catthode_label"
+    },
+    "borderActive": {
+      "dark": "catthode_label",
+      "light": "catthode_border"
+    },
+    "borderSubtle": {
+      "dark": "catthode_border",
+      "light": "catthode_label"
+    },
+    "diffAdded": {
+      "dark": "catthode_green",
+      "light": "catthode_green"
+    },
+    "diffRemoved": {
+      "dark": "catthode_red",
+      "light": "catthode_red"
+    },
+    "diffContext": {
+      "dark": "catthode_label",
+      "light": "catthode_label"
+    },
+    "diffHunkHeader": {
+      "dark": "catthode_label",
+      "light": "catthode_label"
+    },
+    "diffHighlightAdded": {
+      "dark": "catthode_green",
+      "light": "catthode_green"
+    },
+    "diffHighlightRemoved": {
+      "dark": "catthode_red",
+      "light": "catthode_red"
+    },
+    "diffAddedBg": {
+      "dark": "#1a3d1a",
+      "light": "#e8f5e8"
+    },
+    "diffRemovedBg": {
+      "dark": "#3d1a1a",
+      "light": "#f5e8e8"
+    },
+    "diffContextBg": {
+      "dark": "catthode_selection",
+      "light": "catthode_variable"
+    },
+    "diffLineNumber": {
+      "dark": "catthode_border",
+      "light": "catthode_variable"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "#1a3d1a",
+      "light": "#e8f5e8"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "#3d1a1a",
+      "light": "#f5e8e8"
+    },
+    "markdownText": {
+      "dark": "catthode_variable",
+      "light": "catthode_base"
+    },
+    "markdownHeading": {
+      "dark": "catthode_tan",
+      "light": "catthode_amber"
+    },
+    "markdownLink": {
+      "dark": "catthode_gold",
+      "light": "catthode_clay"
+    },
+    "markdownLinkText": {
+      "dark": "catthode_amber",
+      "light": "catthode_amber"
+    },
+    "markdownCode": {
+      "dark": "catthode_green",
+      "light": "catthode_green"
+    },
+    "markdownBlockQuote": {
+      "dark": "catthode_label",
+      "light": "catthode_border"
+    },
+    "markdownEmph": {
+      "dark": "catthode_gold",
+      "light": "catthode_clay"
+    },
+    "markdownStrong": {
+      "dark": "catthode_tan",
+      "light": "catthode_amber"
+    },
+    "markdownHorizontalRule": {
+      "dark": "catthode_border",
+      "light": "catthode_label"
+    },
+    "markdownListItem": {
+      "dark": "catthode_tan",
+      "light": "catthode_amber"
+    },
+    "markdownListEnumeration": {
+      "dark": "catthode_amber",
+      "light": "catthode_clay"
+    },
+    "markdownImage": {
+      "dark": "catthode_gold",
+      "light": "catthode_clay"
+    },
+    "markdownImageText": {
+      "dark": "catthode_amber",
+      "light": "catthode_amber"
+    },
+    "markdownCodeBlock": {
+      "dark": "catthode_variable",
+      "light": "catthode_base"
+    },
+    "syntaxComment": {
+      "dark": "catthode_label",
+      "light": "catthode_border"
+    },
+    "syntaxKeyword": {
+      "dark": "catthode_red",
+      "light": "catthode_red"
+    },
+    "syntaxFunction": {
+      "dark": "catthode_tan",
+      "light": "catthode_gold"
+    },
+    "syntaxVariable": {
+      "dark": "catthode_amber",
+      "light": "catthode_clay"
+    },
+    "syntaxString": {
+      "dark": "catthode_green",
+      "light": "catthode_green"
+    },
+    "syntaxNumber": {
+      "dark": "catthode_gold",
+      "light": "catthode_clay"
+    },
+    "syntaxType": {
+      "dark": "catthode_amber",
+      "light": "catthode_clay"
+    },
+    "syntaxOperator": {
+      "dark": "catthode_red",
+      "light": "catthode_red"
+    },
+    "syntaxPunctuation": {
+      "dark": "catthode_variable",
+      "light": "catthode_base"
+    }
+  }
+}

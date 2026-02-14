@@ -25,3 +25,8 @@ tmux/plugins/tpm_log.txt
 
 # mole
 mole/*
+
+# Kilo CLI
+kilo/*
+!kilo/config.json
+!kilo/themes/
