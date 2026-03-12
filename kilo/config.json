@@ -21,7 +21,13 @@
       "git status *": "allow",
       "git status": "allow",
       "git diff *": "allow",
-      "git log *": "allow"
+      "git log *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "ag *": "allow",
+      "ack *": "allow",
+      "less *": "allow",
+      "more *": "allow"
     },
     "cmd": "ask",
     "webfetch": "ask",
@@ -32,5 +38,15 @@
     "grep": "allow",
     "glob": "allow",
     "ls": "allow"
+  },
+  "agent": {
+    "Auto_Code": {
+      "mode": "primary",
+      "description": "Code mode that doesn't require permission to make edits",
+      "permission": {
+        "edit": "allow",
+        "write": "allow"
+      }
+    }
   }
 }
