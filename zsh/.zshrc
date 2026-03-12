@@ -224,3 +224,6 @@ g() {
     command git "$@"
   fi
 }
+
+# Zoxide
+eval "$(zoxide init zsh --cmd cd)"

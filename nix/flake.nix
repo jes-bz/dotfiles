@@ -25,6 +25,7 @@
           pkgs.ffmpeg
           pkgs.fzf
           pkgs.gh
+          pkgs.glow
           pkgs.imagemagick
           pkgs.micro
           pkgs.obsidian
@@ -32,6 +33,7 @@
           pkgs.tmux
           pkgs.tree
           pkgs.uv
+          pkgs.zoxide
         ];
       homebrew = {
         enable = true;
@@ -42,7 +44,6 @@
           "kilo"
           "mactop"
           "mole"
-          "qwen-code"
           "superfile"
         ];
         taps = [
@@ -53,6 +54,7 @@
           "alacritty"
           "alt-tab"
           "batfi"
+          "claude"
           "discord"
           "google-drive"
           "iina"
@@ -72,6 +74,7 @@
         masApps = {
           "NordVPN" = 905953485;
           "Windows App" = 1295203466;
+          "Perplexity: Ask Anything" = 6714467650;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
