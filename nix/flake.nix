@@ -84,6 +84,7 @@
 
       fonts.packages = [
         pkgs.nerd-fonts.hack
+        pkgs.nerd-fonts.caskaydia-mono
       ];
 
       system.defaults = {

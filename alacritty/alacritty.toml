@@ -1,7 +1,5 @@
 [general]
-import = [
-  "~/.config/alacritty/catthode.toml"
-]
+import = ["~/.config/alacritty/catthode.toml"]
 
 [window]
 decorations = "none"
@@ -9,23 +7,23 @@ opacity = 0.75
 startup_mode = "Maximized"
 
 [font]
-size = 14.0
+size = 16.0
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+family = "CaskaydiaMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+family = "CaskaydiaMono Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+family = "CaskaydiaMono Nerd Font Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "Hack Nerd Font Mono"
+family = "CaskaydiaMono Nerd Font Mono"
 style = "Bold Italic"
 
 [keyboard]
-bindings = [ { key = "Return", mods = "Shift", chars = "\n" } ]
+bindings = [{ key = "Return", mods = "Shift", chars = "\n" }]
