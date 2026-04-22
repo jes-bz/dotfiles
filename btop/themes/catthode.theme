@@ -1,0 +1,92 @@
+# Catthode Theme for btop
+# https://github.com/catthode
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#000000"
+
+# Main text color
+theme[main_fg]="#ffffff"
+
+# Title color for boxes
+theme[title]="#ffb86c"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#ff9e3b"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#2d2d2d"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ff9e3b"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#757575"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#e8e8e8"
+
+# Background color of the percentage meters
+theme[meter_bg]="#141414"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#fae2c8"
+
+# Cpu box outline color
+theme[cpu_box]="#636363"
+
+# Memory box outline color
+theme[mem_box]="#636363"
+
+# Net box outline color
+theme[net_box]="#636363"
+
+# Processes box outline color
+theme[proc_box]="#636363"
+
+# Box divider line and small boxes line color
+theme[div_line]="#636363"
+
+# Temperature graph colors
+theme[temp_start]="#9cd9e6"
+theme[temp_mid]="#ffb86c"
+theme[temp_end]="#ff6b6b"
+
+# CPU graph colors
+theme[cpu_start]="#9cd9e6"
+theme[cpu_mid]="#ffb86c"
+theme[cpu_end]="#ff6b6b"
+
+# Mem/Disk free meter
+theme[free_start]="#aee6d6"
+theme[free_mid]="#9cd9e6"
+theme[free_end]="#9cd9e6"
+
+# Mem/Disk cached meter
+theme[cached_start]="#fae2c8"
+theme[cached_mid]="#ffb86c"
+theme[cached_end]="#ff9e3b"
+
+# Mem/Disk available meter
+theme[available_start]="#d9b98c"
+theme[available_mid]="#fae2c8"
+theme[available_end]="#ffb86c"
+
+# Mem/Disk used meter
+theme[used_start]="#f08d49"
+theme[used_mid]="#ff9e3b"
+theme[used_end]="#ff6b6b"
+
+# Download graph colors
+theme[download_start]="#aee6d6"
+theme[download_mid]="#9cd9e6"
+theme[download_end]="#b9d665"
+
+# Upload graph colors
+theme[upload_start]="#fae2c8"
+theme[upload_mid]="#f08d49"
+theme[upload_end]="#ff6b6b"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#aee6d6"
+theme[process_mid]="#ff9e3b"
+theme[process_end]="#ff6b6b"

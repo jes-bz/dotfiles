@@ -1,0 +1,66 @@
+# ====================
+# GitHub CLI (can contain tokens)
+# ====================
+gh/
+
+# ====================
+# Sensitive / Binary
+# ====================
+dconf/
+nordvpn/
+pulse/
+evolution/
+ibus/
+
+# ====================
+# Cache & Temp
+# ====================
+.cache/
+*.log
+
+# ====================
+# Nix (can contain secrets)
+# ====================
+# Ignore everything except flake.nix
+nix/*
+# except the flake itself
+!nix/flake.nix
+!nix/flake.lock
+
+# ====================
+# System (not user config)
+# ====================
+systemd/
+
+# ====================
+# Thunar (file manager cache)
+# ====================
+Thunar/
+
+# ====================
+# XDG / System generated
+# ====================
+user-dirs.dirs
+user-dirs.locale
+xdg-terminals.list
+
+# ====================
+# Shell history
+# ====================
+zsh/.zsh_history
+
+# ====================
+# Superfile themes
+# ====================
+superfile/theme/
+
+# ====================
+# Zsh completions cache
+# ====================
+zsh/.zcompdump*
+
+# ====================
+# Desktop Environments
+# ====================
+gtk-3.0/
+xfce4/
