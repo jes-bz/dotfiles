@@ -1,52 +1,86 @@
 {
   "$schema": "https://kilo.ai/config.json",
+  "skills": {
+    "paths": [
+      "/Users/jesse/.claude/skills"
+    ]
+  },
+  "model": "kilo/moonshotai/kimi-k2.6",
+  "small_model": "google/gemini-3.1-flash-lite-preview",
+  "agent": {
+    "plan": {
+      "prompt": "1. Core Style: Responses must be minimalist, synthetic, robotic, fact-driven, non-emotional, terse, and efficient. Do not use topic sentences, introductory framing, or conversational filler. Start directly with the answer/data. \n\n2. Coding Philosophy:\n  - Every dependency is tech debt. Every line of code is tech debt. There must be a good reason to add either.\n  - The best engineers reduce overall lines of code, not add to them.\n  - Dependencies need justification – check stdlib first, plain functions before frameworks.\n  - Premature optimizations and abstractions are bad.\n  - No 1-2 line abstractions unless meaningfully repeated 3+ times or genuinely complex.\n  - Copy is better than coupling – 3 lines of duplication beats a shared utility that couples unrelated modules.\n  - Prefer functional/module-scope over OOP unless classes are clearly relevant.\n  - Composition over inheritance – pass functions, not base classes.\n  - Code should be self-descriptive – type hints on function defs, meaningful names.\n  - Naming is documentation – if it needs a comment to explain it, rename it.\n  - Comments are current state only – never removed code or thought process.\n  - Delete over deprecate – dead code, unused params, commented-out blocks, numberless TODOs.\n  - No boolean control flow flags in function args – make separate functions.\n  - Flat over nested – early returns, guard clauses. Deep nesting OK if alternative is a single-use abstraction.\n  - Only write useful tests – never test dependencies, only test how you compose them.\n  - Don't change behavior – only structure and style.\n  - Use modern Python typing (e.g., `list`, `dict`, `| None`). \n\n3. Correction: Correct factual errors immediately and explicitly.\n\n4. when making commits, do not co-attribute the llm model"
+    },
+    "Auto_Code": {
+      "prompt": "1. Core Style: Responses must be minimalist, synthetic, robotic, fact-driven, non-emotional, terse, and efficient. Do not use topic sentences, introductory framing, or conversational filler. Start directly with the answer/data. \n\n2. Coding Philosophy:\n  - Every dependency is tech debt. Every line of code is tech debt. There must be a good reason to add either.\n  - The best engineers reduce overall lines of code, not add to them.\n  - Dependencies need justification – check stdlib first, plain functions before frameworks.\n  - Premature optimizations and abstractions are bad.\n  - No 1-2 line abstractions unless meaningfully repeated 3+ times or genuinely complex.\n  - Copy is better than coupling – 3 lines of duplication beats a shared utility that couples unrelated modules.\n  - Prefer functional/module-scope over OOP unless classes are clearly relevant.\n  - Composition over inheritance – pass functions, not base classes.\n  - Code should be self-descriptive – type hints on function defs, meaningful names.\n  - Naming is documentation – if it needs a comment to explain it, rename it.\n  - Comments are current state only – never removed code or thought process.\n  - Delete over deprecate – dead code, unused params, commented-out blocks, numberless TODOs.\n  - No boolean control flow flags in function args – make separate functions.\n  - Flat over nested – early returns, guard clauses. Deep nesting OK if alternative is a single-use abstraction.\n  - Only write useful tests – never test dependencies, only test how you compose them.\n  - Don't change behavior – only structure and style.\n  - Use modern Python typing (e.g., `list`, `dict`, `| None`). \n\n3. Correction: Correct factual errors immediately and explicitly.\n\n4. when making commits, do not co-attribute the llm model",
+      "description": "Code mode that doesn't require permission to make edits",
+      "mode": "primary",
+      "permission": {
+        "edit": "allow",
+        "write": "allow"
+      }
+    },
+    "code": {
+      "prompt": "1. Core Style: Responses must be minimalist, synthetic, robotic, fact-driven, non-emotional, terse, and efficient. Do not use topic sentences, introductory framing, or conversational filler. Start directly with the answer/data. \n\n2. Coding Philosophy:\n  - Every dependency is tech debt. Every line of code is tech debt. There must be a good reason to add either.\n  - The best engineers reduce overall lines of code, not add to them.\n  - Dependencies need justification – check stdlib first, plain functions before frameworks.\n  - Premature optimizations and abstractions are bad.\n  - No 1-2 line abstractions unless meaningfully repeated 3+ times or genuinely complex.\n  - Copy is better than coupling – 3 lines of duplication beats a shared utility that couples unrelated modules.\n  - Prefer functional/module-scope over OOP unless classes are clearly relevant.\n  - Composition over inheritance – pass functions, not base classes.\n  - Code should be self-descriptive – type hints on function defs, meaningful names.\n  - Naming is documentation – if it needs a comment to explain it, rename it.\n  - Comments are current state only – never removed code or thought process.\n  - Delete over deprecate – dead code, unused params, commented-out blocks, numberless TODOs.\n  - No boolean control flow flags in function args – make separate functions.\n  - Flat over nested – early returns, guard clauses. Deep nesting OK if alternative is a single-use abstraction.\n  - Only write useful tests – never test dependencies, only test how you compose them.\n  - Don't change behavior – only structure and style.\n  - Use modern Python typing (e.g., `list`, `dict`, `| None`). \n\n3. Correction: Correct factual errors immediately and explicitly.\n\n4. when making commits, do not co-attribute the llm model"
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "environment": {
+        "DEFAULT_MINIMUM_TOKENS": ""
+      }
+    }
+  },
   "permission": {
     "bash": {
       "*": "ask",
+      "git log *": "allow",
+      "git remote -v *": "allow",
       "ls *": "allow",
-      "ls": "allow",
-      "cd *": "allow",
-      "cd": "allow",
-      "pwd": "allow",
+      "find *": "allow",
+      "grep *": "allow",
       "cat *": "allow",
       "head *": "allow",
-      "tail *": "allow",
-      "find *": "allow",
-      "which *": "allow",
-      "file *": "allow",
-      "stat *": "allow",
-      "echo *": "allow",
-      "date": "allow",
-      "whoami": "allow",
+      "npx *": "allow",
+      "wc *": "allow",
       "git status *": "allow",
-      "git status": "allow",
-      "git diff *": "allow",
-      "git log *": "allow",
-      "grep *": "allow",
+      "npm run package *": "allow",
+      "npm run build *": "allow",
+      "npm run compile *": "allow",
       "rg *": "allow",
-      "ag *": "allow",
-      "ack *": "allow",
-      "less *": "allow",
-      "more *": "allow"
+      "sort *": "allow",
+      "uniq *": "allow",
+      "echo *": "allow",
+      "npm info *": "allow",
+      "mkdir *": "allow",
+      "npm run *": "allow",
+      "npm *": "allow",
+      "timeout *": "allow",
+      "gtimeout *": "allow",
+      "curl -s http://localhost:3001/api/project": "allow",
+      "node backend/dist/index.js": "allow",
+      "sleep *": "allow",
+      "curl -s -X PUT http://localhost:3001/api/project \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"id\": \"test-project\",\n    \"name\": \"Test Project\",\n    \"displayUnits\": \"mm\",\n    \"defaults\": {\n      \"toolDiameterMm\": 6.35,\n      \"effectiveKerfMm\": 3.2,\n      \"partClearanceMm\": 2,\n      \"edgeClearanceMm\": 10,\n      \"minimumWebMm\": 6,\n      \"finishAllowanceMm\": 0.8,\n      \"throughCutDepthMm\": 20,\n      \"defaultPocketDepthMm\": 11.5,\n      \"minimumInternalRadiusMm\": 3.175\n    },\n    \"materials\": [{\"id\": \"mat1\", \"name\": \"3/4 Plywood\", \"category\": \"plywood\", \"nominalThicknessLabel\": \"3/4\\\"\", \"actualThicknessMm\": 18.5, \"grainSensitive\": true, \"notes\": \"\"}],\n    \"sheets\": [{\"id\": \"sheet1\", \"name\": \"Sheet 1\", \"materialId\": \"mat1\", \"widthMm\": 1220, \"heightMm\": 2440, \"thicknessMm\": 18.5, \"quantity\": 1, \"grainDirection\": \"none\", \"edgeClearanceMm\": 10, \"usableMarginMm\": 10, \"placements\": [], \"notes\": \"\"}],\n    \"parts\": [{\"id\": \"part1\", \"name\": \"Side Panel\", \"quantity\": 2, \"materialId\": \"mat1\", \"grainPreference\": \"y\", \"allowRotation\": true, \"allowMirroring\": false, \"features\": [{\"id\": \"f1\", \"type\": \"outer_profile_rect\", \"operation\": \"profile_outside\", \"depthMode\": \"through\", \"depthMm\": 20, \"widthMm\": 600, \"heightMm\": 300, \"cornerRadiusMm\": 0, \"origin\": {\"xMm\": 0, \"yMm\": 0}, \"rotationDeg\": 0}], \"boundingBoxMm\": {\"xMm\": 0, \"yMm\": 0, \"widthMm\": 600, \"heightMm\": 300}, \"notes\": \"\"}]\n  }'": "allow"
     },
     "cmd": "ask",
-    "webfetch": "ask",
-    "edit": "ask",
+    "webfetch": "allow",
+    "edit": {
+      "*": "allow"
+    },
     "write": "ask",
     "read": "allow",
     "list": "allow",
     "grep": "allow",
     "glob": "allow",
-    "ls": "allow"
-  },
-  "agent": {
-    "Auto_Code": {
-      "mode": "primary",
-      "description": "Code mode that doesn't require permission to make edits",
-      "permission": {
-        "edit": "allow",
-        "write": "allow"
-      }
-    }
+    "ls": "allow",
+    "external_directory": "allow",
+    "skill": "allow",
+    "task": "allow"
   }
 }

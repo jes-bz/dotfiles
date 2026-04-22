@@ -30,3 +30,4 @@ mole/*
 kilo/*
 !kilo/config.json
 !kilo/themes/
+.kilocode/

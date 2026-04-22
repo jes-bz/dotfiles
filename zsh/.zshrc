@@ -227,3 +227,6 @@ g() {
 
 # Zoxide
 eval "$(zoxide init zsh --cmd cd)"
+
+#bitwarden
+export SSH_AUTH_SOCK=/Users/jesse/.bitwarden-ssh-agent.sock
