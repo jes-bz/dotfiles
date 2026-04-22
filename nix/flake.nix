@@ -41,21 +41,22 @@
           "mas"
           "gemini-cli"
           "git-delta"
-          "kilo"
+          #"kilo"
           "mactop"
           "mole"
           "superfile"
         ];
         taps = [
-          "kilo-org/tap"
+          # "kilo-org/tap"
         ];
         casks = [
           "adguard"
           "alacritty"
           "alt-tab"
           "batfi"
+          "bitwarden"
           "claude"
-          "discord"
+          "claude-code"
           "google-drive"
           "iina"
           "karabiner-elements"
@@ -64,6 +65,7 @@
           "logitune"
           "raycast"
           "spotify"
+          "ticktick"
           "topnotch"
           "the-unarchiver"
           "transmission"
@@ -74,7 +76,6 @@
         masApps = {
           "NordVPN" = 905953485;
           "Windows App" = 1295203466;
-          "Perplexity: Ask Anything" = 6714467650;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
