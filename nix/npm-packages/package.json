@@ -1,0 +1,7 @@
+{
+  "name": "global-npm-packages",
+  "version": "1.0.0",
+  "dependencies": {
+    "@kilocode/cli": "7.2.24"
+  }
+}

@@ -26,6 +26,8 @@ nix/*
 # except the flake itself
 !nix/flake.nix
 !nix/flake.lock
+!nix/npm-packages/
+!nix/update-npm.sh
 
 # ====================
 # System (not user config)
