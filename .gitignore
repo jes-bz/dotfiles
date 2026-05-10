@@ -31,3 +31,7 @@ kilo/*
 !kilo/config.json
 !kilo/themes/
 .kilocode/
+
+
+#iterm
+iterm2/*

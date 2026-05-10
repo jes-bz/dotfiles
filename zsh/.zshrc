@@ -141,8 +141,8 @@ function title {
 function _title_precmd { title "%15<..<%~%<<" "%n@%m:%~." }
 function _title_preexec {
   emulate -L zsh; setopt extended_glob
-  local CMD="${1[(wr)^(=*|sudo|ssh|mosh|rake|-*)]gs/%/%%}"
-  title "$CMD" "%100>...>$2${2:gs/%/%%}%<<"
+  local CMD="${1[(wr)^(*=*|sudo|ssh|mosh|rake|-*)]:gs/%/%%}"
+  title "$CMD" "%100>...>${2:gs/%/%%}%<<"
 }
 
 add-zsh-hook precmd  _title_precmd

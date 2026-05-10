@@ -29,7 +29,6 @@
           pkgs.imagemagick
           pkgs.micro
           pkgs.obsidian
-          pkgs.ripgrep
           pkgs.tmux
           pkgs.tree
           pkgs.uv
@@ -41,28 +40,31 @@
           "mas"
           "gemini-cli"
           "git-delta"
-          #"kilo"
+          "kilo"
           "mactop"
           "mole"
+          "ripgrep"
           "superfile"
         ];
         taps = [
-          # "kilo-org/tap"
+          "kilo-org/tap"
         ];
         casks = [
           "adguard"
-          "alacritty"
           "alt-tab"
           "batfi"
+          "betterdisplay"
           "bitwarden"
           "claude"
           "claude-code"
+          "ghostty"
           "google-drive"
           "iina"
           "karabiner-elements"
           "last-window-quits"
           "logi-options+"
           "logitune"
+          "nordvpn"
           "raycast"
           "spotify"
           "ticktick"
@@ -72,11 +74,9 @@
           "utm"
           "vivaldi"
           "visual-studio-code"
+          "windows-app"
         ];
-        masApps = {
-          "NordVPN" = 905953485;
-          "Windows App" = 1295203466;
-        };
+        masApps = {};
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
