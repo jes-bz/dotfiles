@@ -38,6 +38,13 @@
     }
   },
   "permission": {
+    "read": "allow",
+    "edit": {
+      "*": "allow"
+    },
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
     "bash": {
       "*": "ask",
       "git log *": "allow",
@@ -66,21 +73,15 @@
       "curl -s http://localhost:3001/api/project": "allow",
       "node backend/dist/index.js": "allow",
       "sleep *": "allow",
-      "curl -s -X PUT http://localhost:3001/api/project \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"id\": \"test-project\",\n    \"name\": \"Test Project\",\n    \"displayUnits\": \"mm\",\n    \"defaults\": {\n      \"toolDiameterMm\": 6.35,\n      \"effectiveKerfMm\": 3.2,\n      \"partClearanceMm\": 2,\n      \"edgeClearanceMm\": 10,\n      \"minimumWebMm\": 6,\n      \"finishAllowanceMm\": 0.8,\n      \"throughCutDepthMm\": 20,\n      \"defaultPocketDepthMm\": 11.5,\n      \"minimumInternalRadiusMm\": 3.175\n    },\n    \"materials\": [{\"id\": \"mat1\", \"name\": \"3/4 Plywood\", \"category\": \"plywood\", \"nominalThicknessLabel\": \"3/4\\\"\", \"actualThicknessMm\": 18.5, \"grainSensitive\": true, \"notes\": \"\"}],\n    \"sheets\": [{\"id\": \"sheet1\", \"name\": \"Sheet 1\", \"materialId\": \"mat1\", \"widthMm\": 1220, \"heightMm\": 2440, \"thicknessMm\": 18.5, \"quantity\": 1, \"grainDirection\": \"none\", \"edgeClearanceMm\": 10, \"usableMarginMm\": 10, \"placements\": [], \"notes\": \"\"}],\n    \"parts\": [{\"id\": \"part1\", \"name\": \"Side Panel\", \"quantity\": 2, \"materialId\": \"mat1\", \"grainPreference\": \"y\", \"allowRotation\": true, \"allowMirroring\": false, \"features\": [{\"id\": \"f1\", \"type\": \"outer_profile_rect\", \"operation\": \"profile_outside\", \"depthMode\": \"through\", \"depthMm\": 20, \"widthMm\": 600, \"heightMm\": 300, \"cornerRadiusMm\": 0, \"origin\": {\"xMm\": 0, \"yMm\": 0}, \"rotationDeg\": 0}], \"boundingBoxMm\": {\"xMm\": 0, \"yMm\": 0, \"widthMm\": 600, \"heightMm\": 300}, \"notes\": \"\"}]\n  }'": "allow"
+      "curl -s -X PUT http://localhost:3001/api/project \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"id\": \"test-project\",\n    \"name\": \"Test Project\",\n    \"displayUnits\": \"mm\",\n    \"defaults\": {\n      \"toolDiameterMm\": 6.35,\n      \"effectiveKerfMm\": 3.2,\n      \"partClearanceMm\": 2,\n      \"edgeClearanceMm\": 10,\n      \"minimumWebMm\": 6,\n      \"finishAllowanceMm\": 0.8,\n      \"throughCutDepthMm\": 20,\n      \"defaultPocketDepthMm\": 11.5,\n      \"minimumInternalRadiusMm\": 3.175\n    },\n    \"materials\": [{\"id\": \"mat1\", \"name\": \"3/4 Plywood\", \"category\": \"plywood\", \"nominalThicknessLabel\": \"3/4\\\"\", \"actualThicknessMm\": 18.5, \"grainSensitive\": true, \"notes\": \"\"}],\n    \"sheets\": [{\"id\": \"sheet1\", \"name\": \"Sheet 1\", \"materialId\": \"mat1\", \"widthMm\": 1220, \"heightMm\": 2440, \"thicknessMm\": 18.5, \"quantity\": 1, \"grainDirection\": \"none\", \"edgeClearanceMm\": 10, \"usableMarginMm\": 10, \"placements\": [], \"notes\": \"\"}],\n    \"parts\": [{\"id\": \"part1\", \"name\": \"Side Panel\", \"quantity\": 2, \"materialId\": \"mat1\", \"grainPreference\": \"y\", \"allowRotation\": true, \"allowMirroring\": false, \"features\": [{\"id\": \"f1\", \"type\": \"outer_profile_rect\", \"operation\": \"profile_outside\", \"depthMode\": \"through\", \"depthMm\": 20, \"widthMm\": 600, \"heightMm\": 300, \"cornerRadiusMm\": 0, \"origin\": {\"xMm\": 0, \"yMm\": 0}, \"rotationDeg\": 0}], \"boundingBoxMm\": {\"xMm\": 0, \"yMm\": 0, \"widthMm\": 600, \"heightMm\": 300}, \"notes\": \"\"}]\n  }'": "allow",
+      "git diff *": "allow"
     },
-    "cmd": "ask",
-    "webfetch": "allow",
-    "edit": {
-      "*": "allow"
-    },
-    "write": "ask",
-    "read": "allow",
-    "list": "allow",
-    "grep": "allow",
-    "glob": "allow",
-    "ls": "allow",
+    "task": "allow",
     "external_directory": "allow",
+    "webfetch": "allow",
     "skill": "allow",
-    "task": "allow"
+    "cmd": "ask",
+    "write": "ask",
+    "ls": "allow"
   }
 }
