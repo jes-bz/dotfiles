@@ -30,7 +30,6 @@
         age
         bat
         btop
-        codex
         curl
         delta
         eza
@@ -54,7 +53,6 @@
 
         # Desktop Apps
         (callPackage ./chatgpt-desktop.nix { })
-        thunderbird
 
         # Containers
         docker
