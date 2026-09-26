@@ -67,3 +67,10 @@ zsh/.zcompdump*
 # ====================
 gtk-3.0/
 xfce4/
+
+# ====================
+# Browser and app runtime data
+# ====================
+Codex/
+chromium/
+micro/buffers/
