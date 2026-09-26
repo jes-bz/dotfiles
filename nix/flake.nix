@@ -7,7 +7,7 @@
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-      nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+      nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; config.allowUnfree = true; });
 
       # Track various npm packages easily with a local package.json
       globalNpmPackages = { system, pkgs }: pkgs.buildNpmPackage {
@@ -27,8 +27,10 @@
 
       apps = pkgs: with pkgs; [
         # Terminal Tools
+        age
         bat
         btop
+        codex
         curl
         delta
         eza
@@ -51,7 +53,11 @@
         superfile
 
         # Desktop Apps
+        (callPackage ./chatgpt-desktop.nix { })
         thunderbird
+
+        # Containers
+        docker
       ];
     in {
       devShells = forAllSystems (system: {
