@@ -35,3 +35,18 @@ kilo/*
 
 #iterm
 iterm2/*
+
+# Local browser harness state
+/browser-harness/runtime/
+/browser-harness/tmp/
+/browser-harness/version-cache.json
+
+# Local Nix build results
+/result
+/nix/result
+
+# Machine-local app configs and absolute symlinks
+/spicetify/config-xpui.ini
+/ghostty/config
+/ghostty/themes/Catthode
+/spicetify/Themes/Catthode/

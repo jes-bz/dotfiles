@@ -79,7 +79,11 @@
       "python -m *": "allow",
       "uv *": "allow",
       "source *": "allow",
-      "curl *": "allow"
+      "curl *": "allow",
+      "npm view vite *": "allow",
+      "tail *": "allow",
+      "basename *": "allow",
+      "stat *": "allow"
     },
     "task": "allow",
     "external_directory": "allow",

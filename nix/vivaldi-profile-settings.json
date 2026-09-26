@@ -1,0 +1,398 @@
+{
+  "browser": {
+    "theme": {
+      "saved_local_theme": "CAAQAEgB"
+    }
+  },
+  "schemaVersion": 1,
+  "source": "Vivaldi Default profile UI settings (captured 2026-09-14)",
+  "vivaldi": {
+    "address_bar": {
+      "extensions": {
+        "hidden_extensions": [
+          "mnjggcdmjocbbbhaepdhchncahnbgone",
+          "ponfpcnoihfmfllpaingbgckeeldkhle",
+          "cmedhionkhpnakcndndgjdbohmhepckk",
+          "cjpalhdlnbpafiamejdnhcphjbkeiagm",
+          "iobmefdldoplhmonnnkchglfdeepnfhd",
+          "kbmfpngjjgdllneeigpgjifpgocmfgmb"
+        ]
+      },
+      "show_full_url": true,
+      "show_qr_generator": true,
+      "show_search_suggestions_warning": -1,
+      "visible": false
+    },
+    "appearance": {
+      "density": false,
+      "tree_columns": {
+        "entries": {}
+      }
+    },
+    "bookmarks": {
+      "bar": {
+        "sorting": {
+          "sortField": "manually",
+          "sortOrder": 1
+        },
+        "visible": false
+      },
+      "deleted_partners": [],
+      "language": "en-US",
+      "panel": {
+        "sorting": {
+          "sortField": "manually",
+          "sortOrder": 1
+        }
+      },
+      "version": "39"
+    },
+    "downloads": {
+      "start_automatically": true
+    },
+    "features": {
+      "calendar": false,
+      "feeds": false,
+      "mail": false
+    },
+    "layouts": {
+      "saved": [
+        {
+          "addressBar": "off",
+          "autoHide": false,
+          "autoHidePosition": [
+            "tabBar",
+            "panel",
+            "addressBar",
+            "statusBar",
+            "bookmarksBar"
+          ],
+          "density": true,
+          "icon": "",
+          "id": "5588aca7-ff54-426f-8c08-860463f04250",
+          "panel": "right",
+          "startPageNavigation": "off",
+          "statusBar": "overlay",
+          "tabBar": "top",
+          "tabStacks": "dotted",
+          "title": "Autosaved",
+          "toolbars": {
+            "navigation": [
+              "PanelToggle",
+              "PanelWidthSpacer",
+              "Back",
+              "Forward",
+              "Reload",
+              "AddressField",
+              "Spacer",
+              "Extensions",
+              "UpdateButton",
+              "AccountButton"
+            ],
+            "panel": [
+              "PanelBookmarks",
+              "PanelDownloads",
+              "PanelHistory",
+              "PanelNotes",
+              "PanelTranslate",
+              "PanelWindow",
+              "PanelReadingList",
+              "Divider",
+              "PanelMail",
+              "PanelContacts",
+              "PanelCalendar",
+              "PanelTasks",
+              "PanelFeeds",
+              "WEBPANEL_ckn7fhhqx0000hc2roo8jshm4",
+              "EXT_PANEL_fcoeoabgfenejglbffodgkkbkcdhcgfn",
+              "PanelWeb"
+            ],
+            "tabbar_after": [
+              "NewTab",
+              "FlexibleSpacer"
+            ]
+          }
+        },
+        {
+          "addressBar": "off",
+          "autoHide": false,
+          "autoHidePosition": [
+            "addressBar",
+            "panel",
+            "tabBar",
+            "statusBar",
+            "bookmarksBar"
+          ],
+          "density": true,
+          "icon": "",
+          "id": "dc4993b9-32e0-4123-98e6-2e48229d42f8",
+          "panel": "right",
+          "startPageNavigation": "off",
+          "statusBar": "overlay",
+          "tabBar": "top",
+          "tabStacks": "dotted",
+          "title": "Saved",
+          "toolbars": {
+            "navigation": [
+              "PanelToggle",
+              "PanelWidthSpacer",
+              "Back",
+              "Forward",
+              "Reload",
+              "AddressField",
+              "Spacer",
+              "Extensions",
+              "UpdateButton",
+              "AccountButton"
+            ],
+            "panel": [
+              "PanelBookmarks",
+              "PanelDownloads",
+              "PanelHistory",
+              "PanelNotes",
+              "PanelTranslate",
+              "PanelWindow",
+              "PanelReadingList",
+              "Divider",
+              "PanelMail",
+              "PanelContacts",
+              "PanelCalendar",
+              "PanelTasks",
+              "PanelFeeds",
+              "WEBPANEL_ckn7fhhqx0000hc2roo8jshm4",
+              "EXT_PANEL_fcoeoabgfenejglbffodgkkbkcdhcgfn",
+              "EXT_PANEL_nngceckbapebfimnlniiiahkandclblb",
+              "EXT_PANEL_hehggadaopoacecdllhhajmbjkdcmajg",
+              "PanelWeb"
+            ],
+            "tabbar_after": [
+              "NewTab",
+              "FlexibleSpacer"
+            ]
+          }
+        }
+      ],
+      "selected": "5588aca7-ff54-426f-8c08-860463f04250"
+    },
+    "menu": {
+      "compact": true
+    },
+    "mouse_gestures": {
+      "enabled": false
+    },
+    "panels": {
+      "as_overlay": {
+        "enabled": true
+      },
+      "position": 1,
+      "show_toggle": false,
+      "web": {
+        "elements": [
+          {
+            "id": "WEBPANEL_ckn7fhhqx0000hc2roo8jshm4",
+            "mobileMode": true,
+            "title": "",
+            "url": "https://wikipedia.org",
+            "zoom": 1
+          },
+          {
+            "id": "EXT_PANEL_fcoeoabgfenejglbffodgkkbkcdhcgfn",
+            "mobileMode": true,
+            "origin": "user",
+            "resizable": false,
+            "title": "Open Claude",
+            "url": "about:blank",
+            "width": -1,
+            "zoom": 1
+          },
+          {
+            "id": "EXT_PANEL_nngceckbapebfimnlniiiahkandclblb",
+            "mobileMode": true,
+            "origin": "user",
+            "resizable": false,
+            "title": "Bitwarden",
+            "url": "chrome-extension://nngceckbapebfimnlniiiahkandclblb/sidepanel-disabled.html",
+            "width": -1,
+            "zoom": 1
+          },
+          {
+            "id": "EXT_PANEL_hehggadaopoacecdllhhajmbjkdcmajg",
+            "mobileMode": true,
+            "origin": "user",
+            "resizable": false,
+            "title": "ChatGPT",
+            "url": "chrome-extension://hehggadaopoacecdllhhajmbjkdcmajg/codex-sidepanel/index.html",
+            "width": -1,
+            "zoom": 1
+          }
+        ]
+      },
+      "window_defaults": {
+        "barVisible": false,
+        "contentVisible": false,
+        "selectedPanel": "PanelDownloads",
+        "width": 400
+      }
+    },
+    "quick_commands": {
+      "first_run_tip_dismissed": true,
+      "open_url_in_new_tab": true
+    },
+    "startpage": {
+      "navigation": 2,
+      "speed_dial": {
+        "add_button_visible": false,
+        "delete_visible": false,
+        "order": [],
+        "restore_page": false
+      }
+    },
+    "status_bar": {
+      "display": 2
+    },
+    "system": {
+      "accent_color": "F7821B",
+      "desktop_theme_color": 1,
+      "highlight_color": "B1670A",
+      "mac": {
+        "action_on_double_click": "Maximize",
+        "keyboard_ui_mode": 0,
+        "menubar_visible_in_fullscreen": false,
+        "swipe_scroll_direction": false
+      }
+    },
+    "tabs": {
+      "active_min_size": 30,
+      "at_edge": true,
+      "bar": {
+        "height": 150,
+        "width": 260
+      },
+      "button": {
+        "dismissed_suggestions": [
+          "tabFeatures"
+        ],
+        "last_suggestion_time": 1759632011087
+      },
+      "close_button_left": true,
+      "close_button_permanent": false,
+      "dim_hibernated": true,
+      "stacking": {
+        "mode": 1,
+        "prefer_dotted": false
+      },
+      "thumbnails": false,
+      "visible": true
+    },
+    "theme": {
+      "schedule": {
+        "o_s": {
+          "dark": "821a0114-c46a-4d3a-a95b-545a710907c8",
+          "light": "Vivaldi1"
+        }
+      }
+    },
+    "themes": {
+      "prefer_custom_buttons": true,
+      "user": [
+        {
+          "accentFromPage": false,
+          "accentOnWindow": false,
+          "accentSaturationLimit": 1,
+          "alpha": 1,
+          "backgroundImage": "",
+          "backgroundPosition": "stretch",
+          "blur": 0,
+          "colorAccentBg": "#000000",
+          "colorBg": "#000000",
+          "colorFg": "#ffffff",
+          "colorHighlightBg": "#ffb86c",
+          "colorWindowBg": "",
+          "contrast": 1,
+          "dimBlurred": false,
+          "engineVersion": 1,
+          "id": "821a0114-c46a-4d3a-a95b-545a710907c8",
+          "name": "Catthode",
+          "preferSystemAccent": false,
+          "radius": -1,
+          "simpleScrollbar": false,
+          "transparencyTabBar": false,
+          "transparencyTabs": false,
+          "url": "https://themes.vivaldi.net/themes/wOkJy5aAJmd/status.json",
+          "version": 2
+        },
+        {
+          "accentFromPage": false,
+          "accentOnWindow": true,
+          "accentSaturationLimit": 1,
+          "alpha": 1,
+          "backgroundImage": "",
+          "backgroundPosition": "stretch",
+          "blur": 0,
+          "colorAccentBg": "#4b4c53",
+          "colorBg": "#2e2f37",
+          "colorFg": "#d3d9e3",
+          "colorHighlightBg": "#6590fd",
+          "colorWindowBg": "#1D1E21",
+          "contrast": 0,
+          "defaultBackground": "#2e2f37",
+          "dimBlurred": false,
+          "engineVersion": 1,
+          "id": "Dark-user-copy",
+          "name": "Dark (modified)",
+          "preferSystemAccent": false,
+          "radius": 14,
+          "simpleScrollbar": true,
+          "transparencyTabBar": false,
+          "transparencyTabs": false,
+          "url": "",
+          "version": 1
+        }
+      ]
+    },
+    "toolbars": {
+      "navigation": [
+        "PanelToggle",
+        "PanelWidthSpacer",
+        "Back",
+        "Forward",
+        "Reload",
+        "AddressField",
+        "Spacer",
+        "Extensions",
+        "UpdateButton",
+        "AccountButton"
+      ],
+      "panel": [
+        "PanelBookmarks",
+        "PanelDownloads",
+        "PanelHistory",
+        "PanelNotes",
+        "PanelTranslate",
+        "PanelWindow",
+        "PanelReadingList",
+        "Divider",
+        "PanelMail",
+        "PanelContacts",
+        "PanelCalendar",
+        "PanelTasks",
+        "PanelFeeds",
+        "WEBPANEL_ckn7fhhqx0000hc2roo8jshm4",
+        "EXT_PANEL_fcoeoabgfenejglbffodgkkbkcdhcgfn",
+        "EXT_PANEL_nngceckbapebfimnlniiiahkandclblb",
+        "EXT_PANEL_hehggadaopoacecdllhhajmbjkdcmajg",
+        "PanelWeb"
+      ],
+      "tabbar_after": [
+        "NewTab",
+        "FlexibleSpacer"
+      ]
+    },
+    "translate": {
+      "enabled": true
+    },
+    "workspaces": {
+      "enabled": false
+    }
+  }
+}

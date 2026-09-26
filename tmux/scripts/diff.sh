@@ -13,7 +13,7 @@ show_diff() {
         read -r
         return
     fi
-    echo "$diff" | delta --side-by-side --paging always
+    echo "$diff" | delta --side-by-side --syntax-theme=catthode --paging always
 }
 
 # Inside a git repo — diff directly

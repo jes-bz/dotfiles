@@ -4,7 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-export PATH=$HOME/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/jesse/.local/bin:$PATH
 export CLAUDE_ENV_FILE="$HOME/.claude/shell-init.sh"
 export TERM=xterm-256color
 export LANG="en_US.UTF-8"
@@ -158,10 +158,11 @@ POWERLEVEL9K_DISABLE_GITSTATUS=true
 
 # -- aliases --------------------------------------------------------------
 
-alias spf="superfile"
-alias grep="rg -uuu"
+if ! command -v spf >/dev/null 2>&1 && [[ -x /opt/homebrew/opt/superfile/bin/spf ]]; then
+  alias spf="/opt/homebrew/opt/superfile/bin/spf"
+fi
 
-alias gc="gemini --model gemini-3-pro-preview"
+alias grep="rg -uuu"
 
 uhh() {
   local user_request="$*"
@@ -185,13 +186,27 @@ uhh() {
 
   Here is the user's request: '$user_request'"
 
-  local gemini_response=$(gemini -p "$prompt" | tail -n +2)
-  local command=$(echo "$gemini_response" | grep "^Command:" | sed "s/^Command: //")
-  local description=$(echo "$gemini_response" | grep "^Description:" | sed "s/^Description: //")
+  if ! command -v codex >/dev/null 2>&1; then
+    echo "Error: Codex CLI is not available on PATH."
+    return 1
+  fi
+
+  local response_file="$(mktemp "${TMPDIR:-/tmp}/uhh-codex.XXXXXX")"
+  if ! codex exec --ephemeral --sandbox read-only --skip-git-repo-check --color never \
+      --output-last-message "$response_file" "$prompt" >/dev/null; then
+    rm -f "$response_file"
+    echo "Error: Codex could not produce a suggestion."
+    return 1
+  fi
+
+  local codex_response="$(<"$response_file")"
+  rm -f "$response_file"
+  local command=$(echo "$codex_response" | sed -n 's/^[[:space:]]*Command:[[:space:]]*//p' | head -n 1)
+  local description=$(echo "$codex_response" | sed -n 's/^[[:space:]]*Description:[[:space:]]*//p' | head -n 1)
 
   if [[ -z "$command" || -z "$description" ]]; then
-    echo "Error: Could not parse Gemini response:"
-    echo "$gemini_response"
+    echo "Error: Could not parse Codex response:"
+    echo "$codex_response"
     return 1
   fi
 
@@ -220,8 +235,8 @@ alias lt='eza --tree --level=4 --color=always --group-directories-first --icons'
 alias l.="eza -a | grep -E '^\\.'"
 
 # bat
-alias cat="bat --paging=never --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
-alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+alias cat="bat --paging=never --theme=catthode"
+alias bat="bat --theme=catthode"
 
 # nix
 alias nix-rebuild='nix flake update --flake ~/.config/nix && sudo darwin-rebuild switch --flake ~/.config/nix'

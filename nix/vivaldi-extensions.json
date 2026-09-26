@@ -1,0 +1,132 @@
+{
+  "extensions": [
+    {
+      "enabled": true,
+      "id": "cmedhionkhpnakcndndgjdbohmhepckk",
+      "name": "Adblock for Youtube™",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "7.2.6"
+    },
+    {
+      "enabled": true,
+      "id": "dbepggeogbaibhgnhhndojpepiihcmeb",
+      "name": "Vimium",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "2.4.2"
+    },
+    {
+      "enabled": true,
+      "id": "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+      "name": "Dark Reader",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "4.9.130"
+    },
+    {
+      "enabled": true,
+      "id": "fbohpolgemkbfphodcfgnpjcmedcjhpn",
+      "name": "AdGuard Browser Assistant",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.4.8"
+    },
+    {
+      "enabled": true,
+      "id": "fcoeoabgfenejglbffodgkkbkcdhcgfn",
+      "name": "Claude",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.0.93"
+    },
+    {
+      "enabled": true,
+      "id": "fdpohaocaechififmbbbbbknoalclacl",
+      "name": "GoFullPage - Full Page Screen Capture",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "8.7"
+    },
+    {
+      "enabled": true,
+      "id": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+      "name": "Google Docs Offline",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.110.1"
+    },
+    {
+      "enabled": true,
+      "id": "godoifjoiadanijplaghmhgfeffnblib",
+      "name": "URL Shortener",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "15.0.0"
+    },
+    {
+      "enabled": true,
+      "id": "halllmdjninjohpckldgkaolbhgkfnpe",
+      "name": "Karamel: View Reddit comments on YouTube™",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "2.0.1"
+    },
+    {
+      "enabled": true,
+      "id": "hehggadaopoacecdllhhajmbjkdcmajg",
+      "name": "ChatGPT",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.26.901.11451"
+    },
+    {
+      "enabled": true,
+      "id": "hkbdddpiemdeibjoknnofflfgbgnebcm",
+      "name": "YouTube™ Dual Subtitles",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "3.7.3"
+    },
+    {
+      "enabled": true,
+      "id": "hkgfoiooedgoejojocmhlaklaeopbecg",
+      "name": "Picture-in-Picture Extension (by Google)",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.14"
+    },
+    {
+      "enabled": true,
+      "id": "inomeogfingihgjfjlpeplalcfajhgai",
+      "name": "Chrome Remote Desktop",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "2.1"
+    },
+    {
+      "enabled": true,
+      "id": "iobmefdldoplhmonnnkchglfdeepnfhd",
+      "name": "Google Search Keyboard Shortcuts",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "1.1.20"
+    },
+    {
+      "enabled": true,
+      "id": "kbmfpngjjgdllneeigpgjifpgocmfgmb",
+      "name": "Reddit Enhancement Suite",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "5.24.11"
+    },
+    {
+      "enabled": true,
+      "id": "mnjggcdmjocbbbhaepdhchncahnbgone",
+      "name": "SponsorBlock for YouTube - Skip Sponsorships",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "6.1.6"
+    },
+    {
+      "enabled": true,
+      "id": "nngceckbapebfimnlniiiahkandclblb",
+      "name": "Bitwarden Password Manager",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "2026.8.0"
+    },
+    {
+      "enabled": true,
+      "id": "ogkoifddpkoabehfemkolflcjhklmkge",
+      "name": "Tweaks for YouTube",
+      "update_url": "https://clients2.google.com/service/update2/crx",
+      "version": "3.92.0"
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "Vivaldi Default profile extension registry (captured 2026-09-14)"
+}
