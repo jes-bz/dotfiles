@@ -50,3 +50,6 @@ iterm2/*
 /ghostty/config
 /ghostty/themes/Catthode
 /spicetify/Themes/Catthode/
+
+# Encrypted Raycast data exports
+*.rayconfig
