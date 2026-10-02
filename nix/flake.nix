@@ -94,7 +94,6 @@
         brews = [
           "mas"
           "git-delta"
-          "mactop"
           "mole"
           "ripgrep"
           "superfile"
@@ -108,7 +107,6 @@
         ];
         casks = [
           "adguard"
-          "alt-tab"
           "batfi"
           "betterdisplay"
           "bitwarden"
@@ -116,19 +114,19 @@
           "codex-app"
           "ghostty"
           "google-drive"
-          "hermes-desktop"
+          "handy"
           "iina"
           "karabiner-elements"
-          "last-window-quits"
           "logi-options+"
           "logitune"
+          "macpacker"
           "nordvpn"
           "raycast"
           "ticktick"
           "topnotch"
-          "the-unarchiver"
           "transmission"
           "utm"
+          "vorssaint"
           "vivaldi"
           "visual-studio-code"
           "windows-app"
@@ -164,6 +162,16 @@
       system.defaults.CustomUserPreferences = {
         "com.apple.systempreferences" = {
           allowCloudDesktopAndDocuments = false;
+        };
+        "com.vorssaint.utils" = {
+          switcherEnabled = true;
+          switcherTakeOverSystemShortcuts = true;
+          autoQuitEnabled = true;
+          autoQuitExceptions = [
+            "com.apple.finder"
+            "com.apple.mobilephone"
+            "com.openai.codex"
+          ];
         };
       };
 
@@ -257,9 +265,9 @@
           done
         fi
 
-        # Keep the Catthode Vivaldi extension/theme/layout state reproducible.
-        # Chromium external extension manifests are user-scoped and make
-        # Vivaldi install/update Chrome Web Store extensions on next launch.
+        # Keep the Vivaldi extension list and Catthode theme/layout state
+        # reproducible while letting the Chrome Web Store provide the latest
+        # compatible version of each extension on Vivaldi's update cycle.
         vivaldi_data_dir="/Users/jesse/Library/Application Support/Vivaldi"
         vivaldi_profile_dir="$vivaldi_data_dir/Default"
         vivaldi_external_dir="$vivaldi_data_dir/External Extensions"
@@ -348,8 +356,6 @@ dbaeumer.vscode-eslint
 donjayamanne.python-environment-manager
 github.github-vscode-theme
 github.vscode-github-actions
-google.gemini-cli-vscode-ide-companion
-kilocode.kilo-code
 mechatroner.rainbow-csv
 meta.pyrefly
 ms-python.debugpy
